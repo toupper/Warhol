@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDo-iR-BPQ">
+                                <rect key="frame" x="16" y="60" width="343" height="30"/>
+                                <state key="normal" title="Open Camera"/>
+                                <connections>
+                                    <action selector="openCameraButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d01-2r-kda"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVo-vQ-Ima">
+                                <rect key="frame" x="16" y="104" width="343" height="30"/>
+                                <state key="normal" title="Open Image"/>
+                                <connections>
+                                    <action selector="openImageButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMk-oy-MoV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LVo-vQ-Ima" firstAttribute="width" secondItem="uDo-iR-BPQ" secondAttribute="width" id="5VQ-kT-uDa"/>
+                            <constraint firstItem="LVo-vQ-Ima" firstAttribute="trailing" secondItem="uDo-iR-BPQ" secondAttribute="trailing" id="c1L-K9-dti"/>
+                            <constraint firstItem="uDo-iR-BPQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="d7p-9t-Nq5"/>
+                            <constraint firstItem="LVo-vQ-Ima" firstAttribute="leading" secondItem="uDo-iR-BPQ" secondAttribute="leading" id="gZK-Vx-gKp"/>
+                            <constraint firstItem="LVo-vQ-Ima" firstAttribute="height" secondItem="uDo-iR-BPQ" secondAttribute="height" id="mZI-LG-rSx"/>
+                            <constraint firstItem="LVo-vQ-Ima" firstAttribute="top" secondItem="uDo-iR-BPQ" secondAttribute="bottom" constant="14" id="myE-ab-Hf9"/>
+                            <constraint firstItem="uDo-iR-BPQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="paf-yI-Iyn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uDo-iR-BPQ" secondAttribute="trailing" constant="16" id="y7h-ee-AaE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="LK3-rQ-3xG">
+            <objects>
+                <viewController storyboardIdentifier="ImageViewController" id="8wH-8l-QD4" customClass="ImageViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eeA-fg-7NM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e3H-Tz-S4A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e3H-Tz-S4A" firstAttribute="centerX" secondItem="dSa-tL-MSr" secondAttribute="centerX" id="0AD-Ov-JO2"/>
+                            <constraint firstItem="e3H-Tz-S4A" firstAttribute="height" secondItem="eeA-fg-7NM" secondAttribute="height" id="5QI-iw-F3S"/>
+                            <constraint firstItem="e3H-Tz-S4A" firstAttribute="width" secondItem="eeA-fg-7NM" secondAttribute="width" id="6B7-IZ-VFG"/>
+                            <constraint firstItem="e3H-Tz-S4A" firstAttribute="centerY" secondItem="dSa-tL-MSr" secondAttribute="centerY" id="7hf-Gw-SBh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dSa-tL-MSr"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="e3H-Tz-S4A" id="nfs-Lv-36I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7J-1R-J4L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

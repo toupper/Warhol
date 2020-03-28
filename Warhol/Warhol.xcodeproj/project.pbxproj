@@ -7,31 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		377F6FFF242CB14C0043BA3C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6FFE242CB14C0043BA3C /* ImageViewController.swift */; };
+		379D3E89242A23C90012C71A /* Warhol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FE0DD124280B2200B95287 /* Warhol.framework */; };
+		379D3E8A242A23C90012C71A /* Warhol.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37FE0DD124280B2200B95287 /* Warhol.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		379D3E8F242A2EBB0012C71A /* CameraFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D3E8E242A2EBB0012C71A /* CameraFrontView.swift */; };
 		37FE0DD624280B2200B95287 /* Warhol.h in Headers */ = {isa = PBXBuildFile; fileRef = 37FE0DD424280B2200B95287 /* Warhol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37FE0DE324280B8000B95287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DE224280B8000B95287 /* AppDelegate.swift */; };
-		37FE0DE524280B8000B95287 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DE424280B8000B95287 /* SceneDelegate.swift */; };
-		37FE0DE724280B8000B95287 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DE624280B8000B95287 /* ContentView.swift */; };
-		37FE0DE924280B8100B95287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FE0DE824280B8100B95287 /* Assets.xcassets */; };
-		37FE0DEC24280B8100B95287 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FE0DEB24280B8100B95287 /* Preview Assets.xcassets */; };
-		37FE0DEF24280B8200B95287 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FE0DED24280B8200B95287 /* LaunchScreen.storyboard */; };
 		37FE0DF524280BC100B95287 /* Warhol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DF424280BC100B95287 /* Warhol.swift */; };
-		37FE0DF724280BF800B95287 /* WarholCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DF624280BF800B95287 /* WarholCameraViewController.swift */; };
+		37FE0DF724280BF800B95287 /* CameraFaceDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DF624280BF800B95287 /* CameraFaceDetectionViewController.swift */; };
+		37FE0DFA2428BD5900B95287 /* FaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DF92428BD5900B95287 /* FaceViewModel.swift */; };
+		37FE0DFD2428C10A00B95287 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DFC2428C10A00B95287 /* CoreGraphicsExtensions.swift */; };
+		37FE0DFF2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DFE2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift */; };
+		37FE0E0D2428C8CF00B95287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0E0C2428C8CF00B95287 /* AppDelegate.swift */; };
+		37FE0E132428C8D100B95287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FE0E122428C8D100B95287 /* Assets.xcassets */; };
+		37FE0E162428C8D100B95287 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FE0E152428C8D100B95287 /* Preview Assets.xcassets */; };
+		37FE0E192428C8D100B95287 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FE0E172428C8D100B95287 /* LaunchScreen.storyboard */; };
+		37FE0E1F2428C9BD00B95287 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FE0E1E2428C9BD00B95287 /* Main.storyboard */; };
+		37FE0E212428C9C900B95287 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0E202428C9C900B95287 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		379D3E8B242A23C90012C71A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37FE0DC824280B2200B95287 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37FE0DD024280B2200B95287;
+			remoteInfo = Warhol;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		379D3E8D242A23C90012C71A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				379D3E8A242A23C90012C71A /* Warhol.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		377F6FFE242CB14C0043BA3C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		379D3E8E242A2EBB0012C71A /* CameraFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFrontView.swift; sourceTree = "<group>"; };
 		37FE0DD124280B2200B95287 /* Warhol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Warhol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FE0DD424280B2200B95287 /* Warhol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Warhol.h; sourceTree = "<group>"; };
 		37FE0DD524280B2200B95287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37FE0DE024280B8000B95287 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		37FE0DE224280B8000B95287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37FE0DE424280B8000B95287 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		37FE0DE624280B8000B95287 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		37FE0DE824280B8100B95287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		37FE0DEB24280B8100B95287 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		37FE0DEE24280B8200B95287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		37FE0DF024280B8200B95287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37FE0DF424280BC100B95287 /* Warhol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warhol.swift; sourceTree = "<group>"; };
-		37FE0DF624280BF800B95287 /* WarholCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarholCameraViewController.swift; sourceTree = "<group>"; };
+		37FE0DF624280BF800B95287 /* CameraFaceDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFaceDetectionViewController.swift; sourceTree = "<group>"; };
+		37FE0DF92428BD5900B95287 /* FaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewModel.swift; sourceTree = "<group>"; };
+		37FE0DFC2428C10A00B95287 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreGraphicsExtensions.swift; path = ../../../../Tutorials/FaceLasers/final/FaceLasers/Extensions/CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
+		37FE0DFE2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoPreviewLayer+Landmarks.swift"; sourceTree = "<group>"; };
+		37FE0E0A2428C8CF00B95287 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FE0E0C2428C8CF00B95287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37FE0E122428C8D100B95287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37FE0E152428C8D100B95287 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		37FE0E182428C8D100B95287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37FE0E1A2428C8D100B95287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37FE0E1E2428C9BD00B95287 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		37FE0E202428C9C900B95287 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,10 +78,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37FE0DDD24280B8000B95287 /* Frameworks */ = {
+		37FE0E072428C8CF00B95287 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379D3E89242A23C90012C71A /* Warhol.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				37FE0DD324280B2200B95287 /* Warhol */,
-				37FE0DE124280B8000B95287 /* SampleApp */,
+				37FE0E0B2428C8CF00B95287 /* SampleApp */,
 				37FE0DD224280B2200B95287 /* Products */,
+				37FE0E002428C86A00B95287 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				37FE0DD124280B2200B95287 /* Warhol.framework */,
-				37FE0DE024280B8000B95287 /* SampleApp.app */,
+				37FE0E0A2428C8CF00B95287 /* SampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,32 +111,52 @@
 		37FE0DD324280B2200B95287 /* Warhol */ = {
 			isa = PBXGroup;
 			children = (
+				37FE0DFB2428C0E500B95287 /* Extensions */,
 				37FE0DD424280B2200B95287 /* Warhol.h */,
 				37FE0DD524280B2200B95287 /* Info.plist */,
 				37FE0DF424280BC100B95287 /* Warhol.swift */,
-				37FE0DF624280BF800B95287 /* WarholCameraViewController.swift */,
+				37FE0DF624280BF800B95287 /* CameraFaceDetectionViewController.swift */,
+				37FE0DF92428BD5900B95287 /* FaceViewModel.swift */,
 			);
 			path = Warhol;
 			sourceTree = "<group>";
 		};
-		37FE0DE124280B8000B95287 /* SampleApp */ = {
+		37FE0DFB2428C0E500B95287 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				37FE0DE224280B8000B95287 /* AppDelegate.swift */,
-				37FE0DE424280B8000B95287 /* SceneDelegate.swift */,
-				37FE0DE624280B8000B95287 /* ContentView.swift */,
-				37FE0DE824280B8100B95287 /* Assets.xcassets */,
-				37FE0DED24280B8200B95287 /* LaunchScreen.storyboard */,
-				37FE0DF024280B8200B95287 /* Info.plist */,
-				37FE0DEA24280B8100B95287 /* Preview Content */,
+				37FE0DFC2428C10A00B95287 /* CoreGraphicsExtensions.swift */,
+				37FE0DFE2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37FE0E002428C86A00B95287 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37FE0E0B2428C8CF00B95287 /* SampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				37FE0E202428C9C900B95287 /* ViewController.swift */,
+				37FE0E1E2428C9BD00B95287 /* Main.storyboard */,
+				37FE0E0C2428C8CF00B95287 /* AppDelegate.swift */,
+				37FE0E122428C8D100B95287 /* Assets.xcassets */,
+				37FE0E172428C8D100B95287 /* LaunchScreen.storyboard */,
+				37FE0E1A2428C8D100B95287 /* Info.plist */,
+				37FE0E142428C8D100B95287 /* Preview Content */,
+				379D3E8E242A2EBB0012C71A /* CameraFrontView.swift */,
+				377F6FFE242CB14C0043BA3C /* ImageViewController.swift */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
 		};
-		37FE0DEA24280B8100B95287 /* Preview Content */ = {
+		37FE0E142428C8D100B95287 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				37FE0DEB24280B8100B95287 /* Preview Assets.xcassets */,
+				37FE0E152428C8D100B95287 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -135,21 +193,23 @@
 			productReference = 37FE0DD124280B2200B95287 /* Warhol.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		37FE0DDF24280B8000B95287 /* SampleApp */ = {
+		37FE0E092428C8CF00B95287 /* SampleApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37FE0DF124280B8200B95287 /* Build configuration list for PBXNativeTarget "SampleApp" */;
+			buildConfigurationList = 37FE0E1B2428C8D100B95287 /* Build configuration list for PBXNativeTarget "SampleApp" */;
 			buildPhases = (
-				37FE0DDC24280B8000B95287 /* Sources */,
-				37FE0DDD24280B8000B95287 /* Frameworks */,
-				37FE0DDE24280B8000B95287 /* Resources */,
+				37FE0E062428C8CF00B95287 /* Sources */,
+				37FE0E072428C8CF00B95287 /* Frameworks */,
+				37FE0E082428C8CF00B95287 /* Resources */,
+				379D3E8D242A23C90012C71A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				379D3E8C242A23C90012C71A /* PBXTargetDependency */,
 			);
 			name = SampleApp;
 			productName = SampleApp;
-			productReference = 37FE0DE024280B8000B95287 /* SampleApp.app */;
+			productReference = 37FE0E0A2428C8CF00B95287 /* SampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -166,7 +226,7 @@
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1120;
 					};
-					37FE0DDF24280B8000B95287 = {
+					37FE0E092428C8CF00B95287 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -185,7 +245,7 @@
 			projectRoot = "";
 			targets = (
 				37FE0DD024280B2200B95287 /* Warhol */,
-				37FE0DDF24280B8000B95287 /* SampleApp */,
+				37FE0E092428C8CF00B95287 /* SampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -198,13 +258,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37FE0DDE24280B8000B95287 /* Resources */ = {
+		37FE0E082428C8CF00B95287 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37FE0DEF24280B8200B95287 /* LaunchScreen.storyboard in Resources */,
-				37FE0DEC24280B8100B95287 /* Preview Assets.xcassets in Resources */,
-				37FE0DE924280B8100B95287 /* Assets.xcassets in Resources */,
+				37FE0E192428C8D100B95287 /* LaunchScreen.storyboard in Resources */,
+				37FE0E162428C8D100B95287 /* Preview Assets.xcassets in Resources */,
+				37FE0E132428C8D100B95287 /* Assets.xcassets in Resources */,
+				37FE0E1F2428C9BD00B95287 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,28 +276,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37FE0DF724280BF800B95287 /* WarholCameraViewController.swift in Sources */,
+				37FE0DF724280BF800B95287 /* CameraFaceDetectionViewController.swift in Sources */,
+				37FE0DFD2428C10A00B95287 /* CoreGraphicsExtensions.swift in Sources */,
+				37FE0DFF2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift in Sources */,
+				37FE0DFA2428BD5900B95287 /* FaceViewModel.swift in Sources */,
 				37FE0DF524280BC100B95287 /* Warhol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37FE0DDC24280B8000B95287 /* Sources */ = {
+		37FE0E062428C8CF00B95287 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37FE0DE324280B8000B95287 /* AppDelegate.swift in Sources */,
-				37FE0DE524280B8000B95287 /* SceneDelegate.swift in Sources */,
-				37FE0DE724280B8000B95287 /* ContentView.swift in Sources */,
+				37FE0E212428C9C900B95287 /* ViewController.swift in Sources */,
+				37FE0E0D2428C8CF00B95287 /* AppDelegate.swift in Sources */,
+				377F6FFF242CB14C0043BA3C /* ImageViewController.swift in Sources */,
+				379D3E8F242A2EBB0012C71A /* CameraFrontView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		379D3E8C242A23C90012C71A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37FE0DD024280B2200B95287 /* Warhol */;
+			targetProxy = 379D3E8B242A23C90012C71A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		37FE0DED24280B8200B95287 /* LaunchScreen.storyboard */ = {
+		37FE0E172428C8D100B95287 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				37FE0DEE24280B8200B95287 /* Base */,
+				37FE0E182428C8D100B95287 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -295,6 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -352,6 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -368,6 +443,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 67VC2B47W7;
@@ -383,6 +460,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.casaseca.Warhol;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -394,6 +473,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 67VC2B47W7;
@@ -409,46 +490,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.casaseca.Warhol;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		37FE0DF224280B8200B95287 /* Debug */ = {
+		37FE0E1C2428C8D100B95287 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SampleApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 67VC2B47W7;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = EKP9ZV782L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.casaseca.SampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.weltmobil.Warhol.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		37FE0DF324280B8200B95287 /* Release */ = {
+		37FE0E1D2428C8D100B95287 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SampleApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 67VC2B47W7;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = EKP9ZV782L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.casaseca.SampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.weltmobil.Warhol.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,11 +559,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37FE0DF124280B8200B95287 /* Build configuration list for PBXNativeTarget "SampleApp" */ = {
+		37FE0E1B2428C8D100B95287 /* Build configuration list for PBXNativeTarget "SampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37FE0DF224280B8200B95287 /* Debug */,
-				37FE0DF324280B8200B95287 /* Release */,
+				37FE0E1C2428C8D100B95287 /* Debug */,
+				37FE0E1D2428C8D100B95287 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
