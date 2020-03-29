@@ -23,6 +23,8 @@ public class CameraFaceDetectionViewController: UIViewController {
   var sequenceHandler = VNSequenceRequestHandler()
 
   private var faceViewModel = FaceViewModel()
+  private let faceDetector = FaceDetector()
+  
   public var cameraFrontView: CameraFrontView? {
     willSet {
       guard let faceView = newValue else {
@@ -74,7 +76,6 @@ public class CameraFaceDetectionViewController: UIViewController {
 }
 
 // MARK: - Video Processing methods
-
 extension CameraFaceDetectionViewController {
   func configureCaptureSession() {
     connectCameraToCaptureSessionInput()
@@ -121,101 +122,14 @@ extension CameraFaceDetectionViewController: AVCaptureVideoDataOutputSampleBuffe
     guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
       return
     }
-
-    let detectFaceRequest = VNDetectFaceLandmarksRequest(completionHandler: detectedFace)
-
-    do {
-      try sequenceHandler.perform(
-        [detectFaceRequest],
-        on: imageBuffer,
-        orientation: .leftMirrored)
-    } catch {
-      print(error.localizedDescription)
-    }
-  }
-}
-
-extension CameraFaceDetectionViewController {
-  private func landmark(points: [CGPoint]?, to rect: CGRect) -> [CGPoint]? {
-    guard let points = points else {
-      return nil
-    }
-
-    return points.compactMap { previewLayer.landmark(point: $0, to: rect) }
-  }
-  
-  private func updateFaceView(for result: VNFaceObservation) {
-    debugPrint("updateFaceView")
-    let box = result.boundingBox
-    faceViewModel.boundingBox = previewLayer.convert(rect: box)
-
-    guard let landmarks = result.landmarks else {
-      return
-    }
-
-    if let leftEye = landmark(
-      points: landmarks.leftEye?.normalizedPoints,
-      to: result.boundingBox) {
-      faceViewModel.leftEye = leftEye
-    }
-
-    if let rightEye = landmark(
-      points: landmarks.rightEye?.normalizedPoints,
-      to: result.boundingBox) {
-      faceViewModel.rightEye = rightEye
-    }
-
-    if let leftEyebrow = landmark(
-      points: landmarks.leftEyebrow?.normalizedPoints,
-      to: result.boundingBox) {
-      faceViewModel.leftEyebrow = leftEyebrow
-    }
-
-    if let rightEyebrow = landmark(
-      points: landmarks.rightEyebrow?.normalizedPoints,
-      to: result.boundingBox) {
-      faceViewModel.rightEyebrow = rightEyebrow
-    }
-
-    if let nose = landmark(
-      points: landmarks.nose?.normalizedPoints,
-      to: result.boundingBox) {
-      faceViewModel.nose = nose
-    }
-
-    if let outerLips = landmark(
-      points: landmarks.outerLips?.normalizedPoints,
-      to: result.boundingBox) {
-      faceViewModel.outerLips = outerLips
-    }
-
-    if let innerLips = landmark(
-      points: landmarks.innerLips?.normalizedPoints,
-      to: result.boundingBox) {
-      faceViewModel.innerLips = innerLips
-    }
-
-    if let faceContour = landmark(
-      points: landmarks.faceContour?.normalizedPoints,
-      to: result.boundingBox) {
-      faceViewModel.faceContour = faceContour
-    }
     
-    delegate?.faceViewModelDidUpdate(faceViewModel)
-    cameraFrontView?.viewModel = faceViewModel
-    
-    DispatchQueue.main.async {
-      self.cameraFrontView?.setNeedsDisplay()
-    }
-  }
-
-  func detectedFace(request: VNRequest, error: Error?) {
-    guard let results = request.results as? [VNFaceObservation],
-      let result = results.first else {
-        faceViewModel.clear()
-        return
-    }
-    
-    updateFaceView(for: result)
+    faceDetector.detectFace(from: imageBuffer, previewLayer: previewLayer, completion: {viewModel in
+      self.delegate?.faceViewModelDidUpdate(self.faceViewModel)
+      self.cameraFrontView?.viewModel = viewModel
+      
+      DispatchQueue.main.async {
+        self.cameraFrontView?.setNeedsDisplay()
+      }
+    })
   }
 }

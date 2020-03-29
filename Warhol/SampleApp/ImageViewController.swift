@@ -18,7 +18,7 @@ final class ImageViewController: UIViewController {
     super.viewDidLoad()
     
     imageView.image = UIImage(named: "Face")
-    Warhol.detectLandmarks(in: imageView, completion: { (viewModel, context) in
+    Warhol.detectLandmarks(in: imageView, completion: { (viewModel, context)  in
             context.saveGState()
 
             defer {
@@ -43,7 +43,7 @@ final class ImageViewController: UIViewController {
             self.draw(landmark: viewModel.innerLips, closePath: true, in: context)
             
             self.draw(landmark: viewModel.faceContour, closePath: false, in: context)
-    })
+    }, error: {_ in })
   }
   
   private func draw(landmark: FaceLandmark, closePath: Bool, in context: CGContext) {

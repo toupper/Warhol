@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		377F6FFF242CB14C0043BA3C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6FFE242CB14C0043BA3C /* ImageViewController.swift */; };
+		377F70132430FF770043BA3C /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F70122430FF770043BA3C /* FaceDetector.swift */; };
 		379D3E89242A23C90012C71A /* Warhol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FE0DD124280B2200B95287 /* Warhol.framework */; };
 		379D3E8A242A23C90012C71A /* Warhol.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37FE0DD124280B2200B95287 /* Warhol.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		379D3E8F242A2EBB0012C71A /* CameraFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D3E8E242A2EBB0012C71A /* CameraFrontView.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		377F6FFE242CB14C0043BA3C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		377F70122430FF770043BA3C /* FaceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
 		379D3E8E242A2EBB0012C71A /* CameraFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFrontView.swift; sourceTree = "<group>"; };
 		37FE0DD124280B2200B95287 /* Warhol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Warhol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FE0DD424280B2200B95287 /* Warhol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Warhol.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				37FE0DF424280BC100B95287 /* Warhol.swift */,
 				37FE0DF624280BF800B95287 /* CameraFaceDetectionViewController.swift */,
 				37FE0DF92428BD5900B95287 /* FaceViewModel.swift */,
+				377F70122430FF770043BA3C /* FaceDetector.swift */,
 			);
 			path = Warhol;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				37FE0DFD2428C10A00B95287 /* CoreGraphicsExtensions.swift in Sources */,
 				37FE0DFF2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift in Sources */,
 				37FE0DFA2428BD5900B95287 /* FaceViewModel.swift in Sources */,
+				377F70132430FF770043BA3C /* FaceDetector.swift in Sources */,
 				37FE0DF524280BC100B95287 /* Warhol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
