@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372C82FE24390777005115DB /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C82FD24390777005115DB /* CoreGraphicsExtensions.swift */; };
 		377F6FFF242CB14C0043BA3C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6FFE242CB14C0043BA3C /* ImageViewController.swift */; };
 		377F70132430FF770043BA3C /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F70122430FF770043BA3C /* FaceDetector.swift */; };
 		377F7026243395060043BA3C /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F7025243395060043BA3C /* UIView+Constraints.swift */; };
@@ -17,7 +18,6 @@
 		37FE0DF524280BC100B95287 /* Warhol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DF424280BC100B95287 /* Warhol.swift */; };
 		37FE0DF724280BF800B95287 /* CameraFaceDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DF624280BF800B95287 /* CameraFaceDetectionViewController.swift */; };
 		37FE0DFA2428BD5900B95287 /* FaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DF92428BD5900B95287 /* FaceViewModel.swift */; };
-		37FE0DFD2428C10A00B95287 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DFC2428C10A00B95287 /* CoreGraphicsExtensions.swift */; };
 		37FE0DFF2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0DFE2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift */; };
 		37FE0E0D2428C8CF00B95287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE0E0C2428C8CF00B95287 /* AppDelegate.swift */; };
 		37FE0E132428C8D100B95287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FE0E122428C8D100B95287 /* Assets.xcassets */; };
@@ -52,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		372C82FD24390777005115DB /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
 		377F6FFE242CB14C0043BA3C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		377F70122430FF770043BA3C /* FaceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
 		377F7025243395060043BA3C /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		37FE0DF424280BC100B95287 /* Warhol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warhol.swift; sourceTree = "<group>"; };
 		37FE0DF624280BF800B95287 /* CameraFaceDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFaceDetectionViewController.swift; sourceTree = "<group>"; };
 		37FE0DF92428BD5900B95287 /* FaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewModel.swift; sourceTree = "<group>"; };
-		37FE0DFC2428C10A00B95287 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreGraphicsExtensions.swift; path = ../../../../Tutorials/FaceLasers/final/FaceLasers/Extensions/CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
 		37FE0DFE2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoPreviewLayer+Landmarks.swift"; sourceTree = "<group>"; };
 		37FE0E0A2428C8CF00B95287 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FE0E0C2428C8CF00B95287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		37FE0DFB2428C0E500B95287 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				37FE0DFC2428C10A00B95287 /* CoreGraphicsExtensions.swift */,
+				372C82FD24390777005115DB /* CoreGraphicsExtensions.swift */,
 				37FE0DFE2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift */,
 				377F7025243395060043BA3C /* UIView+Constraints.swift */,
 			);
@@ -321,10 +321,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FE0DF724280BF800B95287 /* CameraFaceDetectionViewController.swift in Sources */,
-				37FE0DFD2428C10A00B95287 /* CoreGraphicsExtensions.swift in Sources */,
 				37FE0DFF2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift in Sources */,
 				377F7026243395060043BA3C /* UIView+Constraints.swift in Sources */,
 				37FE0DFA2428BD5900B95287 /* FaceViewModel.swift in Sources */,
+				372C82FE24390777005115DB /* CoreGraphicsExtensions.swift in Sources */,
 				377F70132430FF770043BA3C /* FaceDetector.swift in Sources */,
 				37FE0DF524280BC100B95287 /* Warhol.swift in Sources */,
 			);
