@@ -51,7 +51,7 @@ pod 'Warhol'
 To get the full benefits import `Warhol` wherever you use it
 
 ``` swift
-import Wahol
+import Warhol
 ```
 ### Carthage
 
