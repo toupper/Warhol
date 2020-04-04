@@ -21,7 +21,7 @@
     </a>
 </p>
 
-Welcome to **Warhol** — A library written in Swift that makes easy the process of Face Detection and drawing on them on IOS.
+Welcome to **Warhol** — A library written in Swift that makes easy the process of Face Detection and drawing on top for IOS.
 
 Warhol acts as a wrapper on top of the Apple Vision Framework, detecting the features of a face from camera or image and providing these elements position in your own coordinates, so you can easily draw on top. Forget about the complex Vision or AVFoundation frameworks, just handle the Warhol Face View Model class that encapsulates the features coordinates.
 
