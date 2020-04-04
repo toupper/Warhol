@@ -109,7 +109,7 @@ cameraViewController.cameraFrontView = faceView
 present(cameraViewController, animated: true, completion: nil)
 ```
 
-In order to draw, we should create a subclass of UIView that complies with the Warhol protocol FaceView. We can then draw in their ```func draw(_ rect: CGRect)``` function:
+In order to draw, we should create a subclass of UIView that complies with the Warhol protocol FaceView. We can then draw in their ```func draw(_ rect: CGRect)``` function. Anytime Warhol detects a Face change, it will call ```setNeedsDisplay()``` on the view so it can trigger the draw process:
 
 ```swift
 import Warhol
@@ -132,7 +132,7 @@ final class FaceView: UIView, CameraFrontView {
 
     ...
 ```
-
+Apart from that, you can implement the ```CameraFaceDetectionDelegate``` protocol to react to any change in the Face Dectection.
 ### With Image
 
 In order to detect a face features and draw on top, we should pass the sdk the UIImageView depicting the face, and a closure where we draw on top of the image:
