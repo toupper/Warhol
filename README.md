@@ -2,17 +2,28 @@
     <img src="warhol.png" width="480” max-width="90%" alt="Warhol" />
 </p>
 
+<p align="center">
+    <img src="https://img.shields.io/badge/Swift-5.2-orange.svg" />
+    <a href="https://swift.org/package-manager">
+        <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
+    </a>
+    <a href="https://github.com/Carthage/Carthage">
+        <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage" />
+    </a>
+    <a href="https://cocoapods.org">
+        <img src="https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg" alt="CocoaPods" />
+    </a>
+    <a href="http://makeapullrequest.com">
+        <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" />
+    </a>
+    <a href="https://medium.com/@toupper">
+        <img src="https://img.shields.io/badge/medium-@toupper-blue.svg">" alt="Medium: @toupper" />
+    </a>
+</p>
+
 Welcome to **Warhol** — Warhol is a library written in Swift that makes easy the process of Face Detection and drawing on them on IOS.
 
-[![Swift Version][swift-image]][swift-url]
-[![Build Status][travis-image]][travis-url]
-[![License][license-image]][license-url]
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
-[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
-Warhol acts as a wrapper on top of the Apple Vision Framework, detecting the features of a face from camera or image and provising these elements position in your own coordinates, so you can easily draw on top. You can therefore absolutely forget about the Vision or AVFoundation frameworks, just handle the Warhol Face View Model class that encapsulates the features coordinates.
+Warhol acts as a wrapper on top of the Apple Vision Framework, detecting the features of a face from camera or image and providing these elements position in your own coordinates, so you can easily draw on top. Forget about the complex Vision or AVFoundation frameworks, just handle the Warhol Face View Model class that encapsulates the features coordinates.
 
 ## Features
 
