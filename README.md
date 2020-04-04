@@ -17,11 +17,11 @@
         <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" />
     </a>
     <a href="https://medium.com/@toupper">
-        <img src="https://img.shields.io/badge/medium-@toupper-blue.svg">" alt="Medium: @toupper" />
+        <img src="https://img.shields.io/badge/medium-@toupper-blue.svg" alt="Medium: @toupper" />
     </a>
 </p>
 
-Welcome to **Warhol** — Warhol is a library written in Swift that makes easy the process of Face Detection and drawing on them on IOS.
+Welcome to **Warhol** — A library written in Swift that makes easy the process of Face Detection and drawing on them on IOS.
 
 Warhol acts as a wrapper on top of the Apple Vision Framework, detecting the features of a face from camera or image and providing these elements position in your own coordinates, so you can easily draw on top. Forget about the complex Vision or AVFoundation frameworks, just handle the Warhol Face View Model class that encapsulates the features coordinates.
 
