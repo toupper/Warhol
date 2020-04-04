@@ -1,5 +1,8 @@
-# Warhol
-> Warhol is a library written in Swift that makes easy the process of Face Detection and drawing on IOS.
+<p align="center">
+    <img src="warhol.png" width="480” max-width="90%" alt="Warhol" />
+</p>
+
+Welcome to **Warhol** — Warhol is a library written in Swift that makes easy the process of Face Detection and drawing on them on IOS.
 
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
