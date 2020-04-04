@@ -16,7 +16,7 @@ extension AVCaptureVideoPreviewLayer {
 
     return CGRect(origin: origin, size: size.cgSize)
   }
-  
+
   func landmark(point: CGPoint, to rect: CGRect) -> CGPoint {
     let absolute = point.absolutePoint(in: rect)
     let converted = layerPointConverted(fromCaptureDevicePoint: absolute)

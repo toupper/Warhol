@@ -15,16 +15,12 @@ class ViewController: UIViewController {
     let faceView = FaceView()
     faceView.backgroundColor = .clear
     cameraViewController.cameraFrontView = faceView
-    //cameraViewController.delegate = self
     present(cameraViewController, animated: true, completion: nil)
   }
+
   @IBAction func openImageButtonWasPressed(_ sender: Any) {
     let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
     let imageViewController = mainStoryboard.instantiateViewController(withIdentifier: "ImageViewController")
      present(imageViewController, animated: true, completion: nil)
   }
-}
-
-extension ViewController: CameraFaceDetectionDelegate {
-  func faceViewModelDidUpdate(_ viewModel: FaceViewModel) {}
 }

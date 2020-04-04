@@ -30,34 +30,32 @@ final class FaceView: UIView, CameraFrontView {
     UIColor.red.setStroke()
     context.strokePath()
     UIColor.white.setStroke()
-    
+
     draw(landmark: viewModel.leftEye, closePath: true, in: context)
     draw(landmark: viewModel.rightEye, closePath: true, in: context)
-    
+
     draw(landmark: viewModel.leftEyebrow, closePath: false, in: context)
     draw(landmark: viewModel.rightEyebrow, closePath: false, in: context)
-    
+
     draw(landmark: viewModel.nose, closePath: false, in: context)
-    
+
     draw(landmark: viewModel.outerLips, closePath: true, in: context)
     draw(landmark: viewModel.innerLips, closePath: true, in: context)
-    
+
     draw(landmark: viewModel.faceContour, closePath: false, in: context)
   }
-  
+
   private func draw(landmark: FaceLandmark, closePath: Bool, in context: CGContext) {
     guard !landmark.isEmpty else {
       return
     }
-    
+
     context.addLines(between: landmark)
-    
+
     if closePath {
       context.closePath()
     }
-    
+
     context.strokePath()
   }
 }
-
-

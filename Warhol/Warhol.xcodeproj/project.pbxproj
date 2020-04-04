@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		377F6FFF242CB14C0043BA3C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6FFE242CB14C0043BA3C /* ImageViewController.swift */; };
 		377F70132430FF770043BA3C /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F70122430FF770043BA3C /* FaceDetector.swift */; };
+		377F7026243395060043BA3C /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F7025243395060043BA3C /* UIView+Constraints.swift */; };
 		379D3E89242A23C90012C71A /* Warhol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FE0DD124280B2200B95287 /* Warhol.framework */; };
 		379D3E8A242A23C90012C71A /* Warhol.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37FE0DD124280B2200B95287 /* Warhol.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		379D3E8F242A2EBB0012C71A /* CameraFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D3E8E242A2EBB0012C71A /* CameraFrontView.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		377F6FFE242CB14C0043BA3C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		377F70122430FF770043BA3C /* FaceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
+		377F7025243395060043BA3C /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		379D3E8E242A2EBB0012C71A /* CameraFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFrontView.swift; sourceTree = "<group>"; };
 		37FE0DD124280B2200B95287 /* Warhol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Warhol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FE0DD424280B2200B95287 /* Warhol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Warhol.h; sourceTree = "<group>"; };
@@ -91,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		377F702724339D680043BA3C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				37FE0E202428C9C900B95287 /* ViewController.swift */,
+				377F6FFE242CB14C0043BA3C /* ImageViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		377F702824339D750043BA3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				379D3E8E242A2EBB0012C71A /* CameraFrontView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		37FE0DC724280B2200B95287 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +148,7 @@
 			children = (
 				37FE0DFC2428C10A00B95287 /* CoreGraphicsExtensions.swift */,
 				37FE0DFE2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift */,
+				377F7025243395060043BA3C /* UIView+Constraints.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,15 +163,14 @@
 		37FE0E0B2428C8CF00B95287 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				37FE0E202428C9C900B95287 /* ViewController.swift */,
+				377F702824339D750043BA3C /* View */,
+				377F702724339D680043BA3C /* ViewController */,
 				37FE0E1E2428C9BD00B95287 /* Main.storyboard */,
 				37FE0E0C2428C8CF00B95287 /* AppDelegate.swift */,
 				37FE0E122428C8D100B95287 /* Assets.xcassets */,
 				37FE0E172428C8D100B95287 /* LaunchScreen.storyboard */,
 				37FE0E1A2428C8D100B95287 /* Info.plist */,
 				37FE0E142428C8D100B95287 /* Preview Content */,
-				379D3E8E242A2EBB0012C71A /* CameraFrontView.swift */,
-				377F6FFE242CB14C0043BA3C /* ImageViewController.swift */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -184,6 +203,7 @@
 			buildPhases = (
 				37FE0DCC24280B2200B95287 /* Headers */,
 				37FE0DCD24280B2200B95287 /* Sources */,
+				377F701624320F9D0043BA3C /* Swift Lint Check */,
 				37FE0DCE24280B2200B95287 /* Frameworks */,
 				37FE0DCF24280B2200B95287 /* Resources */,
 			);
@@ -222,7 +242,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Cesar Vargas";
 				TargetAttributes = {
 					37FE0DD024280B2200B95287 = {
@@ -274,6 +294,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		377F701624320F9D0043BA3C /* Swift Lint Check */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint Check";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		37FE0DCD24280B2200B95287 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -282,6 +323,7 @@
 				37FE0DF724280BF800B95287 /* CameraFaceDetectionViewController.swift in Sources */,
 				37FE0DFD2428C10A00B95287 /* CoreGraphicsExtensions.swift in Sources */,
 				37FE0DFF2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift in Sources */,
+				377F7026243395060043BA3C /* UIView+Constraints.swift in Sources */,
 				37FE0DFA2428BD5900B95287 /* FaceViewModel.swift in Sources */,
 				377F70132430FF770043BA3C /* FaceDetector.swift in Sources */,
 				37FE0DF524280BC100B95287 /* Warhol.swift in Sources */,
@@ -447,7 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -457,6 +499,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Warhol/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,7 +520,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -487,6 +530,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Warhol/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
