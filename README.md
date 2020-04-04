@@ -163,9 +163,9 @@ Warhol.drawLandmarksInNewImage(from: imageView,
 
 We would love you for the contribution to **Warhol**, check the ``LICENSE`` file for more info.
 
-## Meta
+## Credits
 
-Created and maintained by [César Vargas Casaseca](https://github.com/toupper). You can follow me om Medium [@toupper](https://medium.com/@toupper) for project updates, releases and more stories.
+Created and maintained with love by [César Vargas Casaseca](https://github.com/toupper). You can follow me on Medium [@toupper](https://medium.com/@toupper) for project updates, releases and more stories.
 
 ## License
 
