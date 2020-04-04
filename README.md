@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="warhol.png" width="850 max-width="90%" alt="Warhol" />
+    <img src="warhol.png" width="650 max-width="90%" alt="Warhol" />
 </p>
 
 <p align="center">
