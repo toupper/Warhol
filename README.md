@@ -58,7 +58,7 @@ import Wahol
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "toupper/Warhol" ~> 0.1.0
+github "toupper/Warhol" ~> 0.1.1
 ```
 
 ### Swift Package Manager
@@ -69,7 +69,7 @@ Once you have your Swift package set up, adding Alamofire as a dependency is as 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/toupper/Warhol.git", .upToNextMajor(from: "0.1.0"))
+    .package(url: "https://github.com/toupper/Warhol.git", .upToNextMajor(from: "0.1.1"))
 ]
 ```
 ## Manually
