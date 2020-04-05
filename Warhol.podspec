@@ -7,7 +7,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Warhol"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "Face detection made easy."
   s.description      = <<-DESC
 			Warhol acts as a wrapper on top of the Apple Vision Framework, detecting the features of a face from camera or image and providing these elements position in your own coordinates, so you can easily draw on top.
