@@ -7,7 +7,9 @@
 //
 
 import AVFoundation
-import UIKit
+#if !os(macOS)
+  import UIKit
+#endif
 import Vision
 
 /// Views to be updated when a face is detected should comply with this protocol
