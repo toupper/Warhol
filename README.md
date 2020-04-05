@@ -65,7 +65,7 @@ github "toupper/Warhol" ~> 0.1.1
 
 The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but Alamofire does support its use on supported platforms.
 
-Once you have your Swift package set up, adding Alamofire as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+Once you have your Swift package set up, adding Warhol as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
 ```swift
 dependencies: [
@@ -74,7 +74,7 @@ dependencies: [
 ```
 ## Manually
 
-You can also integrate Alamofire into your project manually.
+You can also integrate Warhol into your project manually.
 
 #### Embedded Framework
 
@@ -102,6 +102,7 @@ Import Warhol in the file you are going to use it. Create an instance of ```Came
 
 ```swift
 import Warhol
+
 let cameraViewController = CameraFaceDetectionViewController()
 let faceView = FaceView()
 faceView.backgroundColor = .clear
@@ -113,6 +114,7 @@ In order to draw, we should create a subclass of UIView that complies with the W
 
 ```swift
 import Warhol
+
 final class FaceView: UIView, CameraFrontView {
   var viewModel: FaceViewModel?
 
@@ -138,6 +140,7 @@ Apart from that, you can implement the ```CameraFaceDetectionDelegate``` protoco
 In order to detect a face features and draw on top, we should pass the sdk the UIImageView depicting the face, and a closure where we draw on top of the image:
 ```swift
 import Warhol
+
 imageView.image = UIImage(named: "Face")
 Warhol.drawLandmarks(from: imageView,
                      draw: { (viewModel, context)  in
