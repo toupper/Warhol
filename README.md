@@ -134,7 +134,7 @@ final class FaceView: UIView, CameraFrontView {
 
     ...
 ```
-Apart from that, you can implement the ```CameraFaceDetectionDelegate``` protocol to react to any change in the Face Dectection.
+Apart from that, you can implement the ```CameraFaceDetectionDelegate``` protocol to react to any change in the Face Dectection. This can be convenient for the case when you do not want to draw on top, but just get the face features (landmarks) coordinates. These are encapsulated in the given parameter ```FaceViewModel```.
 ### With Image
 
 In order to detect a face features and draw on top, we should pass the sdk the UIImageView depicting the face, and a closure where we draw on top of the image:
