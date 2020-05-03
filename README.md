@@ -58,7 +58,7 @@ import Warhol
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "toupper/Warhol" ~> 0.1.2
+github "toupper/Warhol" ~> 0.2.0
 ```
 
 ### Swift Package Manager
@@ -69,7 +69,7 @@ Once you have your Swift package set up, adding Warhol as a dependency is as eas
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/toupper/Warhol.git", .upToNextMajor(from: "0.1.2"))
+    .package(url: "https://github.com/toupper/Warhol.git", .upToNextMajor(from: "0.2.0"))
 ]
 ```
 ## Manually
@@ -96,7 +96,7 @@ You can also integrate Warhol into your project manually.
 
 ## Usage example
 
-### With Camera
+### From Camera, Draw on Top
 
 Import Warhol in the file you are going to use it. Create an instance of ```CameraFaceDetectionViewController```, and asign the view where you are going to draw to the ```cameraFrontView``` property of the former. You can then present the view controller:
 
@@ -134,8 +134,32 @@ final class FaceView: UIView, CameraFrontView {
 
     ...
 ```
+
+### From Camera, Add Images on Face Features
+
+<p align="center">
+    <img src="FaceLayout.jpg" width="375 max-width="90%" alt="FaceLayouts" />
+</p>
+
+If you want to add images on top of each Face Features, you have to compose a ```FaceLayout``` object defining an ```ImageLayout``` object for each type of Face Landmark you want to draw. You can set the desired offset and Size Ratio for each feature.  Once you have it, you should then pass it to the faceLayout property of the ```CameraFaceDetectionViewController```. Please notice that if you do that the ```cameraFrontView``` property gets overriden:
+
+```
+let cameraViewController = CameraFaceDetectionViewController()
+
+    let leftEye = ImageLayout(image: UIImage(named: "leftEye")!, sizeRatio: SizeRatio(width: 1, height: 4))
+    let rightEye = ImageLayout(image: UIImage(named: "rightEye")!, sizeRatio: SizeRatio(width: 1, height: 4))
+    let nose = ImageLayout(image: UIImage(named: "nose")!)
+
+    let faceLayout = FaceLayout(landmarkLayouts: [.leftEye: leftEye,
+                                                  .rightEye: rightEye,
+                                                  .nose: nose])
+    cameraViewController.faceLayout = faceLayout
+
+    present(cameraViewController, animated: true, completion: nil)
+```
+
 Apart from that, you can implement the ```CameraFaceDetectionDelegate``` protocol to react to any change in the Face Dectection. This can be convenient for the case when you do not want to draw on top, but just get the face features (landmarks) coordinates. These are encapsulated in the given parameter ```FaceViewModel```.
-### With Image
+### From Image
 
 In order to detect a face features and draw on top, we should pass the sdk the UIImageView depicting the face, and a closure where we draw on top of the image:
 ```swift
