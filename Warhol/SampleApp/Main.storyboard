@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,25 +17,36 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDo-iR-BPQ">
                                 <rect key="frame" x="16" y="60" width="343" height="30"/>
-                                <state key="normal" title="Open Camera"/>
+                                <state key="normal" title="Open Camera With Client Drawing"/>
                                 <connections>
-                                    <action selector="openCameraButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d01-2r-kda"/>
+                                    <action selector="openCameraWithClientDrawingButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d01-2r-kda"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVo-vQ-Ima">
                                 <rect key="frame" x="16" y="104" width="343" height="30"/>
+                                <state key="normal" title="Open Camera With Images on Features"/>
+                                <connections>
+                                    <action selector="openCameraWithImageFeatures:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vlp-Ta-9Ja"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lif-Qj-t4h">
+                                <rect key="frame" x="16" y="148" width="343" height="30"/>
                                 <state key="normal" title="Open Image"/>
                                 <connections>
-                                    <action selector="openImageButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMk-oy-MoV"/>
+                                    <action selector="openImageButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nOM-6a-Hys"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LVo-vQ-Ima" firstAttribute="width" secondItem="uDo-iR-BPQ" secondAttribute="width" id="5VQ-kT-uDa"/>
+                            <constraint firstItem="Lif-Qj-t4h" firstAttribute="trailing" secondItem="LVo-vQ-Ima" secondAttribute="trailing" id="AAt-Le-BXB"/>
+                            <constraint firstItem="Lif-Qj-t4h" firstAttribute="top" secondItem="LVo-vQ-Ima" secondAttribute="bottom" constant="14" id="N9F-FT-O76"/>
+                            <constraint firstItem="Lif-Qj-t4h" firstAttribute="leading" secondItem="LVo-vQ-Ima" secondAttribute="leading" id="Qpm-ms-l9g"/>
                             <constraint firstItem="LVo-vQ-Ima" firstAttribute="trailing" secondItem="uDo-iR-BPQ" secondAttribute="trailing" id="c1L-K9-dti"/>
                             <constraint firstItem="uDo-iR-BPQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="d7p-9t-Nq5"/>
                             <constraint firstItem="LVo-vQ-Ima" firstAttribute="leading" secondItem="uDo-iR-BPQ" secondAttribute="leading" id="gZK-Vx-gKp"/>
+                            <constraint firstItem="Lif-Qj-t4h" firstAttribute="height" secondItem="LVo-vQ-Ima" secondAttribute="height" id="kt5-uA-jxc"/>
                             <constraint firstItem="LVo-vQ-Ima" firstAttribute="height" secondItem="uDo-iR-BPQ" secondAttribute="height" id="mZI-LG-rSx"/>
                             <constraint firstItem="LVo-vQ-Ima" firstAttribute="top" secondItem="uDo-iR-BPQ" secondAttribute="bottom" constant="14" id="myE-ab-Hf9"/>
                             <constraint firstItem="uDo-iR-BPQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="paf-yI-Iyn"/>

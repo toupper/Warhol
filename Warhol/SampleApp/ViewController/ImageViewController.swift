@@ -41,20 +41,10 @@ final class ImageViewController: UIViewController {
     context.strokePath()
     UIColor.blue.setStroke()
 
-    self.draw(landmark: viewModel.leftEye, closePath: true, in: context)
-    self.draw(landmark: viewModel.rightEye, closePath: true, in: context)
-
-    self.draw(landmark: viewModel.leftEyebrow, closePath: false, in: context)
-    self.draw(landmark: viewModel.rightEyebrow, closePath: false, in: context)
-
-    self.draw(landmark: viewModel.nose, closePath: false, in: context)
-
-    self.draw(landmark: viewModel.outerLips, closePath: true, in: context)
-    self.draw(landmark: viewModel.innerLips, closePath: true, in: context)
-    self.draw(landmark: viewModel.faceContour, closePath: false, in: context)
+    Array(viewModel.landmarks.values).forEach { self.draw(landmark: $0, closePath: true, in: context) }
   }
 
-  private func draw(landmark: FaceLandmark, closePath: Bool, in context: CGContext) {
+  private func draw(landmark: FaceLandmarkPerimeter, closePath: Bool, in context: CGContext) {
     guard !landmark.isEmpty else {
       return
     }

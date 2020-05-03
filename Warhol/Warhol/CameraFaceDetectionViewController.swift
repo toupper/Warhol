@@ -42,6 +42,17 @@ public class CameraFaceDetectionViewController: UIViewController {
     }
   }
 
+  /// Use this property to pass your layout assigning an image to face features
+  public var faceLayout: FaceLayout? {
+    willSet {
+      guard let faceLayout = newValue else {
+        return
+      }
+
+      cameraFrontView = FaceLayoutCameraFrontView(layout: faceLayout)
+    }
+  }
+
   private func addCameraFrontView(_ frontView: UIView) {
     view.addSubview(frontView)
     view.adjustSubviewToEdges(subView: frontView)

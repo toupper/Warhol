@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		372C82FE24390777005115DB /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C82FD24390777005115DB /* CoreGraphicsExtensions.swift */; };
+		373EE90E245C2DDB004E5E6F /* FaceImagesLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EE90D245C2DDB004E5E6F /* FaceImagesLayout.swift */; };
+		373EE910245C393D004E5E6F /* FaceLayoutCameraFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EE90F245C393D004E5E6F /* FaceLayoutCameraFrontView.swift */; };
+		373EE912245D8287004E5E6F /* CGRect+SizeFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EE911245D8287004E5E6F /* CGRect+SizeFactor.swift */; };
+		373EE914245EDD9F004E5E6F /* FaceLandmarkPerimeter+Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EE913245EDD9F004E5E6F /* FaceLandmarkPerimeter+Rect.swift */; };
 		377F6FFF242CB14C0043BA3C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6FFE242CB14C0043BA3C /* ImageViewController.swift */; };
 		377F70132430FF770043BA3C /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F70122430FF770043BA3C /* FaceDetector.swift */; };
 		377F7026243395060043BA3C /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F7025243395060043BA3C /* UIView+Constraints.swift */; };
@@ -53,6 +57,10 @@
 
 /* Begin PBXFileReference section */
 		372C82FD24390777005115DB /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
+		373EE90D245C2DDB004E5E6F /* FaceImagesLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceImagesLayout.swift; sourceTree = "<group>"; };
+		373EE90F245C393D004E5E6F /* FaceLayoutCameraFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLayoutCameraFrontView.swift; sourceTree = "<group>"; };
+		373EE911245D8287004E5E6F /* CGRect+SizeFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+SizeFactor.swift"; sourceTree = "<group>"; };
+		373EE913245EDD9F004E5E6F /* FaceLandmarkPerimeter+Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FaceLandmarkPerimeter+Rect.swift"; sourceTree = "<group>"; };
 		377F6FFE242CB14C0043BA3C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		377F70122430FF770043BA3C /* FaceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
 		377F7025243395060043BA3C /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
@@ -93,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		373EE915245EDF7B004E5E6F /* FaceImagesLayout */ = {
+			isa = PBXGroup;
+			children = (
+				373EE90F245C393D004E5E6F /* FaceLayoutCameraFrontView.swift */,
+				373EE90D245C2DDB004E5E6F /* FaceImagesLayout.swift */,
+			);
+			path = FaceImagesLayout;
+			sourceTree = "<group>";
+		};
 		377F702724339D680043BA3C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +149,7 @@
 		37FE0DD324280B2200B95287 /* Warhol */ = {
 			isa = PBXGroup;
 			children = (
+				373EE915245EDF7B004E5E6F /* FaceImagesLayout */,
 				37FE0DFB2428C0E500B95287 /* Extensions */,
 				37FE0DD424280B2200B95287 /* Warhol.h */,
 				37FE0DD524280B2200B95287 /* Info.plist */,
@@ -149,6 +167,8 @@
 				372C82FD24390777005115DB /* CoreGraphicsExtensions.swift */,
 				37FE0DFE2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift */,
 				377F7025243395060043BA3C /* UIView+Constraints.swift */,
+				373EE911245D8287004E5E6F /* CGRect+SizeFactor.swift */,
+				373EE913245EDD9F004E5E6F /* FaceLandmarkPerimeter+Rect.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -323,9 +343,13 @@
 				37FE0DF724280BF800B95287 /* CameraFaceDetectionViewController.swift in Sources */,
 				37FE0DFF2428C50500B95287 /* AVCaptureVideoPreviewLayer+Landmarks.swift in Sources */,
 				377F7026243395060043BA3C /* UIView+Constraints.swift in Sources */,
+				373EE912245D8287004E5E6F /* CGRect+SizeFactor.swift in Sources */,
 				37FE0DFA2428BD5900B95287 /* FaceViewModel.swift in Sources */,
+				373EE90E245C2DDB004E5E6F /* FaceImagesLayout.swift in Sources */,
+				373EE914245EDD9F004E5E6F /* FaceLandmarkPerimeter+Rect.swift in Sources */,
 				372C82FE24390777005115DB /* CoreGraphicsExtensions.swift in Sources */,
 				377F70132430FF770043BA3C /* FaceDetector.swift in Sources */,
+				373EE910245C393D004E5E6F /* FaceLayoutCameraFrontView.swift in Sources */,
 				37FE0DF524280BC100B95287 /* Warhol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,14 +578,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = EKP9ZV782L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.casaseca.Warhol.SampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.weltmobil.warhol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -574,14 +598,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = EKP9ZV782L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.casaseca.Warhol.SampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.axelspringer.weltmobil.warhol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -29,7 +29,7 @@ class FaceDetector {
           return
       }
 
-      let landmarkMaker: (VNFaceLandmarkRegion2D?) -> FaceLandmark? = { faceLandmarkRegion in
+      let landmarkMaker: (VNFaceLandmarkRegion2D?) -> FaceLandmarkPerimeter? = { faceLandmarkRegion in
         guard let points = faceLandmarkRegion?.normalizedPoints else {
           return nil
         }
@@ -74,7 +74,7 @@ class FaceDetector {
                               height: rectHeight)
               }
 
-              let landmarkMaker: (VNFaceLandmarkRegion2D?) -> FaceLandmark? = { faceLandmarkRegion in
+              let landmarkMaker: (VNFaceLandmarkRegion2D?) -> FaceLandmarkPerimeter? = { faceLandmarkRegion in
                  faceLandmarkRegion?.pointsInImage(imageSize: image.size)
               }
 

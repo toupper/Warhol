@@ -15,6 +15,17 @@ public enum WarholError: Error {
   case internalError(Error)
 }
 
+public enum FaceLandmarkType {
+  case leftEye
+  case rightEye
+  case leftEyebrow
+  case rightEyebrow
+  case nose
+  case outerLips
+  case innerLips
+  case faceContour
+}
+
 /**
  Detects a face given a UIImageView instance, and asks the caller to draw on it.
 
