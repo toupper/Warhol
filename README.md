@@ -143,19 +143,19 @@ final class FaceView: UIView, CameraFrontView {
 
 If you want to add images on top of each Face Features, you have to compose a ```FaceLayout``` object defining an ```ImageLayout``` object for each type of Face Landmark you want to draw. You can set the desired offset and Size Ratio for each feature.  Once you have it, you should then pass it to the faceLayout property of the ```CameraFaceDetectionViewController```. Please notice that if you do that the ```cameraFrontView``` property gets overriden:
 
-```
+```swift
 let cameraViewController = CameraFaceDetectionViewController()
 
-    let leftEye = ImageLayout(image: UIImage(named: "leftEye")!, sizeRatio: SizeRatio(width: 1, height: 4))
-    let rightEye = ImageLayout(image: UIImage(named: "rightEye")!, sizeRatio: SizeRatio(width: 1, height: 4))
-    let nose = ImageLayout(image: UIImage(named: "nose")!)
+let leftEye = ImageLayout(image: UIImage(named: "leftEye")!, sizeRatio: SizeRatio(width: 1, height: 4))
+let rightEye = ImageLayout(image: UIImage(named: "rightEye")!, sizeRatio: SizeRatio(width: 1, height: 4))
+let nose = ImageLayout(image: UIImage(named: "nose")!)
 
-    let faceLayout = FaceLayout(landmarkLayouts: [.leftEye: leftEye,
+let faceLayout = FaceLayout(landmarkLayouts: [.leftEye: leftEye,
                                                   .rightEye: rightEye,
                                                   .nose: nose])
-    cameraViewController.faceLayout = faceLayout
+cameraViewController.faceLayout = faceLayout
 
-    present(cameraViewController, animated: true, completion: nil)
+present(cameraViewController, animated: true, completion: nil)
 ```
 
 Apart from that, you can implement the ```CameraFaceDetectionDelegate``` protocol to react to any change in the Face Dectection. This can be convenient for the case when you do not want to draw on top, but just get the face features (landmarks) coordinates. These are encapsulated in the given parameter ```FaceViewModel```.
