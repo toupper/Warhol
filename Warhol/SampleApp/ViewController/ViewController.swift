@@ -23,8 +23,12 @@ class ViewController: UIViewController {
   @IBAction func openCameraWithImageFeatures(_ sender: Any) {
     let cameraViewController = CameraFaceDetectionViewController()
 
-    let leftEye = ImageLayout(image: UIImage(named: "leftEye")!, sizeRatio: SizeRatio(width: 1, height: 4))
-    let rightEye = ImageLayout(image: UIImage(named: "rightEye")!, sizeRatio: SizeRatio(width: 1, height: 4))
+    let leftEye = ImageLayout(image: UIImage(named: "leftEye")!,
+                              offset: CGPoint(x: 0, y: 50),
+                              sizeRatio: SizeRatio(width: 1, height: 4))
+    let rightEye = ImageLayout(image: UIImage(named: "rightEye")!,
+                               offset: CGPoint(x: 0, y: 50),
+                               sizeRatio: SizeRatio(width: 1, height: 4))
     let nose = ImageLayout(image: UIImage(named: "nose")!)
 
     let faceLayout = FaceLayout(landmarkLayouts: [.leftEye: leftEye,
